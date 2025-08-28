@@ -58,3 +58,84 @@ header {
   margin-left: 20px;
   font-size: 1.1em;
 }
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.directory-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.1);
+  position: relative;
+
+}
+
+.service-card .number {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.copy-btn, .call-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.copy-btn { background-color: #ddd; }
+.call-btn { background-color: #4CAF50; color: white; }
+
+.like-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.call-history-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#callHistoryList {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#callHistoryList li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9em;
+}
+
+.all{
+padding: 3px 2px;
+color: #555;
+background-color: #f2f2f2;
+font-size: 13px;
+width: 70px;
+border-radius: 50px;
+text-align: center;
+
+}
