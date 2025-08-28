@@ -31,6 +31,12 @@ header {
     text-align: center;
     text-align: center;
 }
+.hrt{
+  height: 20px;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+}
 .copy-icon{
   background-color: #4CAF50;
   color: white;
@@ -62,6 +68,9 @@ main {
   display: flex;
   gap: 20px;
   padding: 20px;
+}
+.bati{
+  height: 30px;
 }
 
 .directory-grid {
