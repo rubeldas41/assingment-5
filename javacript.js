@@ -41,3 +41,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+    // Copy button
+  copyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const number = button.getAttribute('data-number');
+      navigator.clipboard.writeText(number).then(() => {
+        copyCount++;
+        copyCountEl.textContent = copyCount;
+        alert("copied"+ " "+ number)
+      });
+    });
+  });
+
+  // Clear call history
+  clearHistoryBtn.addEventListener('click', () => {
+    callHistory.length = 0;
+    renderCallHistory();
+  });
+
+  // Render call history list
+  function renderCallHistory() {
+    callHistoryListEl.innerHTML = '';
+    callHistory.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.service} (${item.number}) - ${item.time}`;
+      callHistoryListEl.appendChild(li);
+    });
+  }
+});
